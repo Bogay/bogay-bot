@@ -1,0 +1,15 @@
+{
+    "name": "Bogay Bot",
+    "description": "Line Bot practice",
+    "repository": "https://github.com/Bogay/bogay-bot",
+    "env": {
+        "CHANNEL_ACCESS_TOKEN": {
+            "description": "Long-lived token required for making API calls.",
+            "required": true
+        },
+        "CHANNEL_SECRET": {
+            "description": "Unique secret key for the channel",
+            "required": true
+        }
+    }
+}
