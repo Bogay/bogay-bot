@@ -13,11 +13,8 @@ from linebot.models import (
 
 app = Flask(__name__)
 
-try:
-    line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
-    handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
-except Exception as e:
-    print(e)
+line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
+handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
 
 
 @app.route('/callback', methods=['POST'])
@@ -35,6 +32,8 @@ def callback():
     except InvalidSignatureError:
         print('Invalid signature. Please check your channel access token/channel secret.')
         abort(400)
+    except Exception as e:
+        print(e)
 
     return 'OK'
 
