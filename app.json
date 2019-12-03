@@ -10,6 +10,11 @@
         "CHANNEL_SECRET": {
             "description": "Unique secret key for the channel",
             "required": true
+        },
+        "BASE_URL": {
+            "value": "https://bogay-bot.herokuapp.com",
+            "description": "the app's base url",
+            "required": true
         }
     }
 }
