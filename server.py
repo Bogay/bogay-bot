@@ -58,5 +58,8 @@ def handle_message(event: MessageEvent):
 def handle_message_2(event: MessageEvent):
     line_bot_api.reply_message(
         event.reply_token,
-        ImageSendMessage(original_content_url=f'{os.environ.get("BASE_URL")}/image?id=001')
+        ImageSendMessage(
+            original_content_url=f'{os.environ.get("BASE_URL")}/image?id=001',
+            preview_image_url=f'{os.environ.get("BASE_URL")}/image?id=001'
+        )
     )
